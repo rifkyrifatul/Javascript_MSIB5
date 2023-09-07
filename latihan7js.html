@@ -1,0 +1,39 @@
+<script>
+    //ada pelanggan membeli barang elektronik
+    // barangnya tv harga 3jt, motor harga 12jt, kulkas harga 4jt
+    //tent pembelian barang dan berpa barang yang di beli
+    //cetak hasil pembelian barang dan totalnya
+
+    let pembeli = "budi";
+    let barang = "motor";
+    let hargasatuan = 0;
+
+    switch (barang){
+        case 'tv': hargasatuan = 300000; break;
+        case 'motor': hargasatuan = 1200000; break;
+        case 'kulkas': hargasatuan = 400000; break;
+        default: hargasatuan = 0;
+
+    }
+    //deklarasi varfiable proses
+    let jumlahbeli = 3;
+    let bruto = hargasatuan * jumlahbeli;
+    let ppn = bruto * 0.11;
+    //membuat minimal diskon dari pembelian produk
+    let diskon = 0;
+    if (barang == 'tv') diskon * 0.3 *bruto;
+    else if (barang == 'motor') diskon = 0.2 * bruto;
+    else diskon = 0.05 * bruto;
+    let hasildiskon = bruto * diskon;
+    //cetak proses diatas
+    document.write("<h1> data pembelian</h1>");
+    document.write("<br> pembeli: " + pembeli + 
+                    "<br> barang : " +barang +
+                    "<br> jumlah beli barang: "+hargasatuan +
+                    "<br> total harga : " + bruto +
+                    "<br> diskon : "+diskon +
+                    "<br> ppn : "+ ppn +
+                    "<br> total harga dipotong diskon : " + hasildiskon);
+
+
+</script>
