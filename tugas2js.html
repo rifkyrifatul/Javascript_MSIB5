@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="white">
+    <h1 align="center" >Tugas 2 Javascript Rifky Rifatul Aziz</h1>
+    <fieldset>
+        <legend>Data Pegawai</legend>
+    <script>
+    let pegawai = "Ridwan";
+    let jabatan = "Manager"; 
+  
+    let gapok;
+    if (jabatan == 'Manager') gapok = 15000000;
+    else if (jabatan == 'Asisten manager') gapok = 10000000;
+    else if (jabatan == 'Staff') gapok = 5000000;
+    else gapok = 0;
+
+    let status = (tk = 0.2 * gapok) ? "Menikah" : "Belum menikah";
+    let tj = gapok * 0.15;
+    let bpjs = gapok * 0.1;
+ 
+
+
+    document.write("Nama Pegawai : " +pegawai +
+                    "<br> Jabatan : " +jabatan +
+                    "<br> Status : " +status +
+                    "<br> Gaji Pokok : " +gapok +
+                    "<br> BPJS : " +bpjs + 
+                    "<br> Tunjangan Jabatan : " +tj +
+                    "<br> Tunjangan Keluarga : " +tk);
+
+</script>
+    </fieldset>
+</body>
+</html>
