@@ -1,0 +1,57 @@
+<script>
+    let s1 = {"nama" : "andi", nilai:80};
+    let s2 = {"nama" : "ari", nilai:90};
+    let s3 = {"nama" : "aji", nilai:70};
+    let s4 = {"nama" : "ani", nilai:60};
+    let s5 = {"nama" : "ali", nilai:50};
+    let siswa = [s1,s2,s3,s4,s5];
+</script>
+<table style="padding: 10; text-align: center; width: 100%;">
+    <thead>
+        <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Nilai</th>
+        <th>Keterangan</th>
+        <th>Grade</th>
+        <th>Predikat</th>
+    </tr>
+    </thead>
+    <tbody>
+        <script>
+            var no= 1;
+            for (s of siswa){
+                let ket = (s.nilai >=60 )? "lulus": "gagal";
+                let grade= " ";
+                let predikat= "";
+                //tambahkan if multi kondisi untuk mengetahui grade
+                if (s.nilai > 85 && s.nilai <= 100) grade = "A";
+                else if (s.nilai > 75 && s.nilai <= 85) grade = "B";
+                else if (s.nilai >= 60 && s.nilai <= 75) grade = "C";
+                else if (s.nilai > 30 && s.nilai < 60) grade = "D";
+                else if (s.nilai >= 0 && s.nilai <= 30) grade = "E";
+                else grade = " ";
+
+                switch (grade){
+                case "A" : predikat = "sempurna"; break;
+                case "B" : predikat = "baik"; break;
+                case "C" : predikat = "cukup"; break;
+                case "D" : predikat = "buruk"; break;
+                default : predikat = " "; break;
+
+    }
+
+                document.write(`<tr bgcolor="gray">
+                <td> ${no++}</td>
+                <td> ${s.nama}</td>
+                <td> ${s.nilai}</td>
+                <td> ${ket}</td>
+                <td> ${grade}</td>
+                <td> ${predikat}</td>
+                `);
+            }
+
+        </script>
+    </tbody>
+
+</table>
