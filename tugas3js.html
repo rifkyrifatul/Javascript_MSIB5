@@ -1,0 +1,71 @@
+
+<table style="padding: 10; text-align: center; width: 100%;">
+    <thead>
+        <tr>
+            <td>No</td>
+            <td>Nama Pegawai</td>
+            <td>Jabatan</td>
+            <td>Agama</td>
+            <td>Zakat Profesi</td>
+            <td>Gaji Pokok</td>
+            <td>Tunjangan Jabatan</td>
+            <td>Tunjangan Kesehatan</td>
+            <td>Gaji kotor</td>            
+            <td>Take Home Pay</td>
+        </tr>
+    </thead>
+    <tbody>
+        <script>
+             let no;
+            for (no = 1; no <=10; no++){
+
+            let pegawai = ["Pegawai1", "Pegawai2", "Pegawai3", "Pegawai4", "Pegawai5", "Pegawai6", "Pegawai7", "Pegawai8", "Pegawai9", "Pegawai10"];
+
+            pegawai.forEach((nama, index) => {
+            let jabatan = '';
+             if (index < 2) {
+                jabatan = "Manager";
+                } else if (index >= 2 && index < 5) {
+                jabatan = "Asisten Manager";
+                } else if (index >= 5 && index < 8) {
+                jabatan = "Supervisor";
+                } else {
+                jabatan = "Staff";
+                }
+
+            let gapok = 0;
+            switch (jabatan) {
+                case "Manager" : gapok  = 15000000; break;
+                case "Asisten Manager" : gapok  = 10000000; break;
+                case "Supervisor" : gapok  = 7000000; break;
+                case "Staff" : gapok  = 4000000; break;
+                default : gapok = " "; break;
+            }
+
+            let tj =0.2 * gapok
+            let tk = 0.1 * gapok
+            let gk = gapok + tj + tk
+            let agama = index % 2 === 0 ? "Muslim" : "Non Muslim"
+            let warna = index % 2 === 0 ? "Yellow" : "Blue"
+            let zakat = 0;
+            if(agama == 'Muslim'){
+            zakat = 0.025 * gk;
+            }
+
+            let takeHomePay = gk - zakat;
+
+                    document.write (`<tr bgcolor=${warna}>
+                    <td>${no++}</td>
+                    <td>${nama}</td>
+                    <td>${jabatan}</td>
+                    <td>${agama}</td>
+                    <td>${zakat}</td>
+                    <td>${gapok}</td>
+                    <td>${tj}</td>
+                    <td>${tk}</td>
+                    <td>${gk}</td>
+                    <td>${takeHomePay}</td>
+                    </tr>`)
+            });
+            }</script>
+    </tbody>
