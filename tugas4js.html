@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 Rifky</title>
+  
+</head>
+<body>
+    <div class="container">
+    <form id="frm">
+        <table style="background-color : rgb(74, 127, 132); color: white ; width: 100%; border: 1px solid;">
+            <tr>
+                <th colspan="2">Form Pembelian Barang</th>
+            </tr>
+            <tr>
+                <td><label>Nama Pembeli :</label></td>
+                <td><input type="text" name ="nama" placeholder="Masukan Nama Anda"></td>
+            </tr>
+            <tr>
+                <td><label>Pilih Barang :</label></td>
+                <td><select name="produk" id="brg">
+                    <option value="">Pilih</option>
+                    <option value="TV">TV</option>
+                    <option value="AC">AC</option>
+                    <option value="Kulkas">Kulkas</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label>Jumlah Barang :</label></td>
+                <td><input type="text" name="jumlah" placeholder="Masukan Jumlah Barang"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="button" onclick="databarang()">Beli</button></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <script src="scripttugas4.js"></script>
+</body>
+</html>
