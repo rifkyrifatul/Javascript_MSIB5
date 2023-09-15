@@ -1,0 +1,42 @@
+
+<script>
+    class gempa{
+        constructor(lokasi, skala){
+            this.lokasi = lokasi;
+            this.skala = skala;
+    }
+    
+    dampak(){ 
+        let dampakgempa = "Tidak terasa";
+
+        if (this.skala > 2 && this.skala <= 4) {
+        dampakgempa = "Bangunan Retak";
+        } else if (this.skala > 4 && this.skala <= 6) {
+        dampakgempa = "Bangunan Roboh";
+        } else if  (this.skala > 6 ) {
+        dampakgempa = "Bangunan Roboh dan berpotensi sunami";
+        }
+
+                document.write('Nama Lokasi :', this.lokasi);
+                document.write('<br>Skala :', this.skala);
+                document.write('<br>Dampak :', dampakgempa);
+                document.write('<br>-------------------------<br> ');
+    }
+}
+
+    //membuat objek gempa dengan skala
+    let n1 = new gempa ('Garut', 2);
+    let n2 = new gempa ('Bandung', 5);
+    let n3 = new gempa ('Cianjur', 8);
+    let n4 = new gempa ('Sukabumi', 2);
+    let n5 = new gempa ('Bogor', 3);
+
+    //mencetak informasi gempa 
+n1.dampak();
+n2.dampak();
+n3.dampak();
+n4.dampak();
+n5.dampak();
+   
+    
+</script>
