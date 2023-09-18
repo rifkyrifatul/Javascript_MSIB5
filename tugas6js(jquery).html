@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Tugas 5</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="styleJquery.css">
+    
+
+    <script type="text/Javascript">
+       $(document).ready(function(){
+        $('#div1').click(function(){
+            $('#tampil').html('<h1>Profil</h1><p>Rifky Rifatul Aziz </p><p>STMIK Jabar</p>')
+        });
+
+        $("#div1").mouseover(function(){
+                $(this).css({
+                background: "white"
+            });
+        });
+        
+        $('#div2').click(function(){
+            $('#tampil').html('<h1>Moto Hidup</h1><p>Kaya Bermanfaat Miskin Bermartabat</p>')
+        });
+        $("#div2").mouseover(function(){
+                $(this).css({
+                background: "orange"
+            });
+        });
+
+        $('#div3').click(function(){
+            $('#tampil').html('<h1>Keahlian</h1><p>FULLSATCK WEB DEV</p>')
+        });
+       $("#div3").mouseover(function(){
+                $(this).css({
+                background: "blue"
+            });
+        });
+        
+        $("div").mouseout(function(){
+                $(this).css({
+                background: "blue"
+            });
+        });
+        });
+    </script>
+</head>
+<body>
+    <p>Tugas Jquery</p>
+
+    <!-- <div id="div1">Profil</div> -->
+    <div><a href="#" id="div1">Profil</a></div>
+    <div id="div2">Moto Hidup</div>
+    <div id="div3">Keahlian</div>
+    <div id="tampil"></div>
+</body>
+</html>
